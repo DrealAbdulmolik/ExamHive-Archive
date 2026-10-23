@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --primary-color--: #0082EBFF;
+    --primary-color-hover--: rgb(4, 110, 196);
+    --button-padding--: 9px 19px;
+    --botton-border-radius--: 9px;
+    --container-input--: 8px 15px 8px 7px;
+
+}
+
+body {
+    font-family: sans-serif;
+}
+
+
+
+
+.page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.form-container {
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--primary-color--);
+    border-radius: 9px;
+    padding: 1.2rem;
+    overflow: hidden;
+}
+
+
+a,
+a:active,
+a:visited {
+
+    text-decoration: none;
+    color: var(--primary-color--);
+    font-weight: 700;
+    /* color: black; */
+}
+
+.form-container h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.form-container input {
+    border: 0.8px solid grey;
+    border-radius: 3px;
+    padding: var(--container-input--);
+
+}
+
+.form-container input::placeholder {
+    font-size: 0.8rem;
+}
+label{
+    color: var(--primary-color--);
+}
+
+.form-container p {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.form-container .submit {
+    /* margin-top: 1rem; */
+    font-size: bolder;
+    font-size: 1rem;
+    background-color: var(--primary-color--);
+    color: white;
+    border-radius: var(--botton-border-radius--);
+    padding: var(--button-padding--);
+
+}
+
+.form-container .submit:hover {
+    background-color: var(--primary-color-hover--);
+    transition: 0.5s ease;
+}
+
+.form-container label {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+small {
+    color: red;
+}
+
+.password_strength {
+    display: flex;
+    width: 90%;
+    /* height: 10px; */
+    overflow: hidden;
+    align-items: center;
+    gap: 0.3rem;
+    box-sizing: border-box;
+
+}
+
+#strength_bar {
+    height: 7px;
+    transition: all 0.5s ease;
+    border-radius: 9px;
+    display: block;
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+#level1,
+#level2,
+#level3 {
+    background-color: 0.4s ease-in-out;
+    display: none;
+}

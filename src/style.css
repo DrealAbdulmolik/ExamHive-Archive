@@ -1,0 +1,360 @@
+/* web application/stitch/projects/7260095625592091836/screens/e3f76fc4bac74f9294a787635e36aac9 */
+@import "tailwindcss";
+
+/* ==========================================================================
+   ExamHive - Design Tokens & Custom Properties
+   Vite + Tailwind CSS v4 Architecture
+   ========================================================================== */
+
+:root {
+    /* Brand Primary Colors */
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+    --color-primary-dark: #1e40af;
+    --color-primary-light: #dbeafe;
+    --color-primary-lighter: #2f65fa;
+    --color-primary-tint: #eff6ff;
+
+    /* Accent & Highlight Colors */
+    --color-accent: #f59e0b;
+    --color-accent-hover: #d97706;
+    --color-accent-light: #fef3c7;
+    --color-success: #10b981;
+    --color-success-bg: #ecfdf5;
+
+    /* Surface & Background Neutrals */
+    --color-bg-base: #f8fafc;
+    --color-bg-card: #ffffff;
+    --color-bg-elevated: #ffffff;
+    --color-bg-subtle: #eef4fd;
+    --color-bg-muted: #f1f5f9;
+
+    /* Border & Outline Colors */
+    --color-border-subtle: #e2e8f0;
+    --color-border-focus: #3b82f6;
+    --color-border-primary: rgba(37, 99, 235, 0.25);
+
+    /* Typography / Text Colors */
+    --color-text-main: #0f172a;
+    --color-text-body: #334155;
+    --color-text-muted: #64748b;
+    --color-text-subtle: #94a3b8;
+    --color-text-inverse: #ffffff;
+
+    /* Typography Fonts */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Source Serif 4', Georgia, serif;
+
+    /* Elevations & Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+    --shadow-card-hover: 0 12px 30px -4px rgba(37, 99, 235, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.05);
+    --shadow-cta: 0 10px 25px -5px rgba(37, 99, 235, 0.35);
+    --shadow-mascot: 0 20px 40px -10px rgba(37, 99, 235, 0.3);
+
+    /* Radii */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.25rem;
+    --radius-pill: 9999px;
+
+    /* Spacing & Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@theme {
+    --color-primary: var(--color-primary);
+    --color-primary-hover: var(--color-primary-hover);
+    --color-primary-dark: var(--color-primary-dark);
+    --color-primary-light: var(--color-primary-light);
+    --color-primary-lighter: var(--color-primary-lighter);
+    --color-primary-tint: var(--color-primary-tint);
+
+    --color-accent: var(--color-accent);
+    --color-accent-hover: var(--color-accent-hover);
+    --color-accent-light: var(--color-accent-light);
+
+    --color-success: var(--color-success);
+    --color-success-bg: var(--color-success-bg);
+
+    --color-bg-base: var(--color-bg-base);
+    --color-bg-card: var(--color-bg-card);
+    --color-bg-subtle: var(--color-bg-subtle);
+
+    --color-border-subtle: var(--color-border-subtle);
+    --color-text-main: var(--color-text-main);
+    --color-text-body: var(--color-text-body);
+    --color-text-muted: var(--color-text-muted);
+
+    --font-sans: var(--font-sans);
+    --font-serif: var(--font-serif);
+}
+
+/* ==========================================================================
+   Base & Global Resets
+   ========================================================================== */
+
+/* body {
+    /* overflow-x: hidden; 
+    overflow-y: visible;
+    overflow-x: hidden;
+    /* overflow-: hidden; 
+} */
+
+.wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-main);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* hamburger handle */
+@utility active-border-bottom {
+    border-bottom: 1px solid rgb(192, 188, 188);
+    /* border-top: 1px solid rgb(192, 188, 188); */
+    padding: 1rem 0;
+}
+
+.ham {
+    right: 0;
+
+}
+
+
+
+
+/* ==========================================================================
+   Mascot Keyframes & Animations (Eye Blink, Glance & Body Float)
+   ========================================================================== */
+@keyframes mascotFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-16px) rotate(1.5deg);
+    }
+}
+
+/* Pupil Looking Around Animation */
+@keyframes pupilGlance {
+
+    0%,
+    15% {
+        transform: translate(0, 0);
+    }
+
+    22%,
+    38% {
+        transform: translate(-3.8px, -0.8px);
+        /* Look left */
+    }
+
+    45%,
+    60% {
+        transform: translate(0, 0);
+        /* Center */
+    }
+
+    68%,
+    84% {
+        transform: translate(3.8px, -0.5px);
+        /* Look right */
+    }
+
+    92%,
+    100% {
+        transform: translate(0, 0);
+        /* Center */
+    }
+}
+
+/* Periodic Natural Blinking Animation (Every 3.6s) */
+@keyframes eyeBlink {
+
+    0%,
+    94%,
+    98%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    96% {
+        transform: scaleY(0.08);
+    }
+}
+
+.animate-mascot-float {
+    animation: mascotFloat 4s ease-in-out infinite;
+}
+
+.animate-mascot-shadow {
+    animation: mascotShadow 4s ease-in-out infinite;
+}
+
+.animate-pupil {
+    animation: pupilGlance 7s ease-in-out infinite;
+}
+
+.animate-eyelid {
+    transform-origin: 50% 50%;
+    animation: eyeBlink 3.6s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   Component & Layout Custom Classes
+   ========================================================================== */
+
+/* Top notification banner */
+.announcement-bar {
+    background: linear-gradient(90deg, #1e40af, #2563eb 50%, #1d4ed8);
+    color: var(--color-text-inverse);
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero-wrapper {
+    background: radial-gradient(120% 90% at 50% -10%, #e0ebff 0%, #f4f8ff 45%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Modern Card Presets */
+.hive-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.hive-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: rgba(37, 99, 235, 0.35);
+}
+
+/* Form Inputs & Selects */
+.hive-select,
+.hive-input {
+    width: 100%;
+    border: 1px solid var(--color-border-subtle);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    padding: 0.625rem 0.875rem;
+    font-size: 0.875rem;
+    color: var(--color-text-main);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    outline: none;
+}
+
+.hive-select option {
+    /* Fix native dropdown option spacing bugs */
+
+    padding: 6px 12px !important;
+    line-height: 1.2 !important;
+    min-height: 1.5em !important;
+    background-color: var(--color-bg-card);
+    color: var(--color-text-main);
+
+}
+.disabled{
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #f1f5f9;
+    color: #94a3b8;
+}
+
+
+
+.hive-select:focus,
+.hive-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Interactive Question Sample Pill Options */
+.exam-option-row {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-subtle);
+    background: #ffffff;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.exam-option-row:hover {
+    border-color: var(--color-primary);
+    background: var(--color-primary-tint);
+}
+
+.exam-option-row.is-correct {
+    border-color: #86efac;
+    background-color: #f0fdf4;
+}
+
+/* Custom Buttons */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    box-shadow: var(--shadow-cta);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    color: #78350f;
+    font-weight: 700;
+    border-radius: var(--radius-pill);
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.btn-accent:hover {
+    background-color: var(--color-accent-hover);
+    color: #ffffff;
+}
+
+.nav-flex {
+    display: none;
+}
+
+.nav-bar {
+    display: block;
+}
+
+@media (min-width:980px) {
+    .nav-flex {
+        display: flex;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+}

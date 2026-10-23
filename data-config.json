@@ -1,0 +1,90 @@
+{
+  "colleges": [
+    {
+      "id": "colmah",
+      "name": "COLMAH(Medicine & Allied Health)",
+      "courses": [
+        { "id": "nursing-science", "name": "Nursing Science" },
+        {"id": "medical-laboratory-science", "name": "Medical Laboratory Science"},
+        { "id": "pharmacology", "name": "Pharmacology" },
+        { "id": "physiology", "name": "Physiology" },
+        { "id": "anatomy", "name": "Anatomy" },
+        { "id": "biochemistry", "name": "Biochemistry" }
+      ]
+    },
+    {
+      "id": "coleng",
+      "name": "COLENG (Engineering)",
+      "courses": [
+        {
+          "id": "electrical-electronics-eng",
+          "name": "Electrical and Electronics Engineering"
+        },
+        { "id": "computer-engineering", "name": "Computer Engineering" },
+        {
+          "id": "information-communication-eng",
+          "name": "Information and Communication Engineering"
+        }
+      ]
+    },
+    {
+      "id": "colams",
+      "name": "COLAMS (Management & Social Sciences)",
+      "courses": [
+        { "id": "accounting", "name": "Accounting" },
+        { "id": "banking-finance", "name": "Banking and Finance" },
+        { "id": "business-administration", "name": "Business Administration" },
+        { "id": "economics", "name": "Economics" },
+        { "id": "marketing", "name": "Marketing" },
+        { "id": "entrepreneurship", "name": "Entrepreneurship" },
+        { "id": "mass-communication", "name": "Mass Communication" },
+        {
+          "id": "information-media-studies",
+          "name": "Information and Media Studies"
+        },
+        { "id": "international-relations", "name": "International Relations" },
+        {
+          "id": "peace-conflict-resolution",
+          "name": "Peace Studies and Conflict Resolution"
+        },
+        { "id": "english", "name": "English Language" }
+      ]
+    },
+    {
+      "id": "colsat",
+      "name": "COLSAT (Science & Technology)",
+      "courses": [
+        { "id": "computer-science", "name": "Computer Science" },
+        { "id": "software-engineering", "name": "Software Engineering" },
+        { "id": "cyber-security", "name": "Cyber Security" },
+        { "id": "information-technology", "name": "Information Technology" },
+        { "id": "data-science", "name": "Data Science" },
+        {
+          "id": "science-laboratory-technology",
+          "name": "Science Laboratory Technology"
+        },
+        { "id": "biotechnology", "name": "Biotechnology" },
+        {
+          "id": "food-science-technology",
+          "name": "Food Science and Technology"
+        },
+        { "id": "microbiology", "name": "Microbiology" },
+        { "id": "industrial-chemistry", "name": "Industrial Chemistry" },
+        { "id": "industrial-mathematics", "name": "Industrial Mathematics" },
+        {
+          "id": "physics-with-electronics",
+          "name": "Physics with Electronics"
+        },
+        { "id": "agricultural-science", "name": "Agricultural Science" }
+      ]
+    },
+    {
+      "id": "collaw",
+      "name": "COLLAW (College of Law)",
+      "courses": [{ "id": "law", "name": "Law (LL.B)" }]
+    }
+  ],
+  "sessions": ["2026-2027", "2025-2026", "2024-2025", "2023-2024"],
+  "semester": ["First Semester", "Second Semester"],
+  "level": ["100 level", "200 level", "300 level", "400 level", "500 level"]
+}
