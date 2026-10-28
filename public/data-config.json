@@ -5,7 +5,10 @@
       "name": "COLMAH(Medicine & Allied Health)",
       "courses": [
         { "id": "nursing-science", "name": "Nursing Science" },
-        {"id": "medical-laboratory-science", "name": "Medical Laboratory Science"},
+        {
+          "id": "medical-laboratory-science",
+          "name": "Medical Laboratory Science"
+        },
         { "id": "pharmacology", "name": "Pharmacology" },
         { "id": "physiology", "name": "Physiology" },
         { "id": "anatomy", "name": "Anatomy" },
